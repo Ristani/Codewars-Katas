@@ -10,21 +10,21 @@ NOTE: All numbers will be whole numbers greater than 0.
 """
 
 def expanded_form(num):
-	# Generate a blank table
-    result = []
-    # Default divisible spacing
-    divider = 10
-    # If the (remaining) number is divisible
-    while divider < num:
-    	# And doesn't 0 out
-        if num % divider != 0:
-        	# Insert the value into the results table
-            result.insert(0, str(num % divider))
-        # Subtract the divided amount from the number
-        num -= num % divider
-        # Increase the divider to the next tenth space, and repeat
-        divider *= 10
-    # If not divisible, insert the remaining value to the results
-    result.insert(0, str(num))
+	# Generate a blank list.
+    list = []
+    # Divide by tenths spacing.
+    tenth = 10
+    # While the number is divisible.
+    while tenth < num:
+    	# And doesn't 0 out.
+        if num % tenth != 0:
+        	# Insert the value into the results list.
+            list.insert(0, str(num % tenth))
+        # Subtract the divided amount from the number.
+        num -= num % tenth
+        # Increase the tenth to the next space, and repeat.
+        tenth *= 10
+    # If not divisible, insert the remaining value to the list.
+    list.insert(0, str(num))
     # Return the joined string
-    return ' + '.join(result)
+    return ' + '.join(list)

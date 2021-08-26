@@ -11,17 +11,17 @@ For given example, the return value should be: [[1, 2, 3], [2, 4, 6], [3, 6, 9]]
 """
 
 def multiplication_table(size):
-    # Create an empty table to return.
-    result = []
+    # Create an empty list to return.
+    list = []
     # For each row.
     for r in range(1, size + 1):
-        #Create an empty table.
+        # Create an empty list.
         row = []
         # And with each column.
         for c in range(1, size + 1):
-            # Multiply and append the results.
+            # Multiply and append the row.
             row.append(r * c)
-        # Add each row as it's own table of results.
-        result.append(row)
-    # Return the whole table.
-    return result
+        # Then add each column to the results list.
+        list.append(row)
+    # Return the nested lists.
+    return list

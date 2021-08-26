@@ -9,17 +9,17 @@ String will only contain valid consecutive numbers.
 """
 
 def order(sentence):
-    # Splits the sentence string into an array.
-    arr = sentence.split()
-    # Create an empty list. 
-    lst = {}
-    # For each word in the array.
-    for word in arr:
+    # Splits the sentence into a list of strings.
+    list = sentence.split()
+    # Create an empty dictionary to return. 
+    dict = {}
+    # For each word in the list.
+    for word in list:
         # Search the characters.
         for char in word:
             # For the hidden number, 1 will exist and is 9 or less.
             if char.isdigit() and int(char) <= 9:
-                # Assign the word to its index position within the list.
-                lst[char] = word
-    # Return the sorted list as a string.
-    return " ".join(lst[i] for i in sorted(lst))
+                # Assign the 'key : value' within the dictionary to 'char : word'.
+                dict[char] = word
+    # Sort dictionary by key and return joined values.
+    return " ".join(dict[i] for i in sorted(dict))

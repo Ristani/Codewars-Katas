@@ -14,4 +14,4 @@ def race(v1, v2, g):
     # Determine number of seconds to  close gap
     time = g * 3600 (v2 - v1) // 60
     # Return results or none if v2 doesn't outpace v1
-    return None if v1 >= v2 else [time//3600, time%3600//60, time%60]
+    return None if v1 >= v2 else [time // 3600, time % 3600 // 60, time % 60]

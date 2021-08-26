@@ -10,14 +10,14 @@ if it is, False if not. Ignore numbers and punctuation.
 
 def is_pangram(s):
 	# Create an empty list to store unique characters
-	set = []
+	list = []
 	# Case doesn't matter, so make them all lower for simplicity
 	s = s.lower()
 	# For each character in the string
 	for c in s:
 		# Check if it's a letter and not in the list
-		if c.isalpha() and c not in set:
+		if c.isalpha() and c not in list:
 			# Then add it
-			set.append(c)
-	# If the set contains exactly 26 characters(a-z) return True, else False
-	return len(set) == 26
+			list.append(c)
+	# If the list contains exactly 26 characters(a-z) return True, else False
+	return len(list) == 26
