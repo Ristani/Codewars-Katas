@@ -23,6 +23,7 @@ input (input will always be an array). Order of the face (eyes, nose, mouth)
 elements will always be the same.
 """
 
+
 def count_smileys(arr):
     # Defaults results to 0 if no smileys in array.
     res = 0

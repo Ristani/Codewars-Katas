@@ -11,21 +11,22 @@ Example
   delete_nth ([20,37,20,21],1) # return [20,37,21]
 """
 
-def delete_nth(order,max_e):
+
+def delete_nth(order, max_e):
     # Get a new list that we will return.
-    list = []
-    # Get a dictionary to count the occurences.
-    dict = {}
+    result = []
+    # Get a dictionary to count the occurrences.
+    occurrences = {}
     # Loop through all provided numbers.
     for n in order:
         # Get the count of the current number, or assign it to 0.
-        count = dict.setdefault(n, 0)
-        # If we reached the max occurence for that number, skip it.
+        count = occurrences.setdefault(n, 0)
+        # If we reached the max occurrence for that number, skip it.
         if count >= max_e:
             continue
         # Add the current number to the list.
-        list.append(n)
+        result.append(n)
         # Increase the occurrences.
-        dict[n] += 1
+        occurrences[n] += 1
     # Return the list.
-    return list
+    return result
