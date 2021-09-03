@@ -16,9 +16,10 @@ ls-list of distances
 
 import itertools
 
+
 def choose_best_sum(t, k, ls):
     # For each combination, get a total value, sorted and reversed
-    sums = sorted([sum(i) for i in itertools.combinations(ls, k)], reverse = True)
+    sums = sorted([sum(i) for i in itertools.combinations(ls, k)], reverse=True)
     # Loop through in descending order
     for i in sums:
         # Find the first possible value less than the limiter
