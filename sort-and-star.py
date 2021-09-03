@@ -13,4 +13,4 @@ def two_sort(list):
     # Sort the list.
     list = sorted(list)
     # Return the first value with each character separated by stars.
-    return "***".join(i for i in list[0])
+    return "***".join(list[0])

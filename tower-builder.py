@@ -25,11 +25,8 @@ and a tower of 6 floors looks like below
 """
 
 def tower_builder(n_floors):
-    # Get an empty list to draw the tower in.
-    list = []
-    # For each layer of the tower.
-    for i in range(n_floors):
-        # Add decreasing amounts of spaces on either side of increasing *'s to the list.
-        list.append(' ' * (n_floors - i - 1) + '*' * (i * 2 + 1) + ' ' * (n_floors - i - 1))
     # Return the built tower.
-    return list
+    return [
+        ' ' * (n_floors - i - 1) + '*' * (i * 2 + 1) + ' ' * (n_floors - i - 1)
+        for i in range(n_floors)
+    ]
