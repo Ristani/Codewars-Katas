@@ -12,7 +12,9 @@ Examples:
     basic_op('/', 49, 7)        # Output: 7
 """
 
+
 def basic_op(operator, value1, value2):
+    result = None
     if operator == "+":
         result = value1 + value2
     elif operator == "-":
