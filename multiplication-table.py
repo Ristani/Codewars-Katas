@@ -16,11 +16,7 @@ def multiplication_table(size):
     # For each row.
     for r in range(1, size + 1):
         # Create an empty list.
-        row = []
-        # And with each column.
-        for c in range(1, size + 1):
-            # Multiply and append the row.
-            row.append(r * c)
+        row = [r * c for c in range(1, size + 1)]
         # Then add each row to the results list.
         list.append(row)
     # Return the nested lists.
