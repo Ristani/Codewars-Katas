@@ -8,16 +8,17 @@ Given a string, detect whether or not it is a pangram. Return True
 if it is, False if not. Ignore numbers and punctuation.
 """
 
+
 def is_pangram(s):
 	# Create an empty list to store unique characters
-	list = []
+	result = []
 	# Case doesn't matter, so make them all lower for simplicity
 	s = s.lower()
 	# For each character in the string
 	for c in s:
 		# Check if it's a letter and not in the list
-		if c.isalpha() and c not in list:
+		if c.isalpha() and c not in result:
 			# Then add it
-			list.append(c)
+			result.append(c)
 	# If the list contains exactly 26 characters(a-z) return True, else False
-	return len(list) == 26
+	return len(result) == 26
