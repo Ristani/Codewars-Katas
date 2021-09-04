@@ -14,6 +14,7 @@ customers: An array of positive integers representing the queue.
 The function should return an integer, the total time required.
 """
 
+
 def queue_time(customers, n):
     time = [0] * n
     for i in customers:

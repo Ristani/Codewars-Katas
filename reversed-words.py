@@ -7,5 +7,6 @@ Example:
 "battle no requires which that is victory greatest The"
 """
 
-def reverse_words(str):
-    return " ".join(reversed(str.split()))
+
+def reverse_words(words):
+    return " ".join(reversed(words.split()))

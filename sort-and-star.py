@@ -9,8 +9,9 @@ its letters.
 You should not remove or add elements from/to the array.
 """
 
-def two_sort(list):
+
+def two_sort(array):
     # Sort the list.
-    list = sorted(list)
-    # Return the first value with each character separated by stars.
-    return "***".join(list[0])
+    array = sorted(array)
+    # Return the first word with each character separated by stars.
+    return "***".join(array[0])

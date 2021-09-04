@@ -8,18 +8,19 @@ If the input string is empty, return an empty string. The words in the input
 String will only contain valid consecutive numbers.
 """
 
+
 def order(sentence):
     # Splits the sentence into a list of strings.
-    list = sentence.split()
+    words = sentence.split()
     # Create an empty dictionary to return. 
-    dict = {}
+    result = {}
     # For each word in the list.
-    for word in list:
+    for word in words:
         # Search the characters.
         for char in word:
             # For the hidden number, 1 will exist and is 9 or less.
             if char.isdigit() and int(char) <= 9:
                 # Assign the 'key : value' within the dictionary to 'char : word'.
-                dict[char] = word
+                result[char] = word
     # Sort dictionary by key and return joined values.
-    return " ".join(dict[i] for i in sorted(dict))
+    return " ".join(result[i] for i in sorted(result))

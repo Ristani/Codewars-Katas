@@ -9,6 +9,7 @@ Example:
     25  =>  25 + 12 + 6 + 3 + 1 = 47
 """
 
+
 def halving_sum(n):
     result = 0
     while n >= 1:

@@ -12,6 +12,7 @@ Examples:
     spinWords("This is another test") => "This is rehtona test"
 """
 
+
 def spin_words(sentence):
     # Split the sentence into a list.
     sentence = sentence.split()

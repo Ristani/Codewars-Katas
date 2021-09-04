@@ -13,9 +13,8 @@ For given example, the return value should be: [[1, 2, 3], [2, 4, 6], [3, 6, 9]]
 def multiplication_table(size):
     # Create an empty list to return.
     list = []
-    # For each row.
     for r in range(1, size + 1):
-        # Create an empty list.
+        # Create a list comprehension for each row.
         row = [r * c for c in range(1, size + 1)]
         # Then add each row to the results list.
         list.append(row)

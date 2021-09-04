@@ -16,6 +16,7 @@ Output string must be two numbers separated by a single space, and highest numbe
 is first.
 """
 
+
 def high_and_low(numbers):
     # Split the numbers in the string.
     numbers = numbers.split()

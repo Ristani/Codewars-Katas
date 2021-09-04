@@ -9,5 +9,6 @@ in size given:
 
 """
 
-def nb_year(p0, percent, aug, p, years = 0):
+
+def nb_year(p0, percent, aug, p, years=0):
     return nb_year(p0 + int(p0 * percent / 100) + aug, percent, aug, p, years + 1) if p0 < p else years

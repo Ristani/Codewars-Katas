@@ -24,6 +24,7 @@ and a tower of 6 floors looks like below
 ]
 """
 
+
 def tower_builder(n_floors):
     # Return the built tower.
     return [

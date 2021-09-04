@@ -1,5 +1,5 @@
 """
-Write a function dirReduc which will take an array of strings and returns an
+Write a function dir_reduce which will take an array of strings and returns an
 array of strings with the needless directions removed (W<->E or S<->N side by
 side).
 
@@ -10,20 +10,21 @@ are not directly opposite of each other and can't become such. Hence the result
 path is itself : ["NORTH", "WEST", "SOUTH", "EAST"].
 """
 
-def dirReduc(arr):
+
+def dir_reduce(arr):
     # Stores a dictionary of directions and their opposites.
-    dict = {"NORTH":"SOUTH", "SOUTH":"NORTH", "WEST":"EAST", "EAST":"WEST"}
+    rev_dir = {"NORTH": "SOUTH", "SOUTH": "NORTH", "WEST": "EAST", "EAST": "WEST"}
     # Creates an empty results list.
-    list = []
+    result = []
     # For each direction passed.
     for i in arr:
-        # If the current iterant is the opposite of the last stored result.
-        if list and dict[i] == list[-1]:
+        # If the current iterate is the opposite of the last stored result.
+        if result and rev_dir[i] == result[-1]:
             # Remove it.
-            list.pop()
+            result.pop()
         # Otherwise.
         else:
             # Add it.
-            list.append(i)
+            result.append(i)
     # Return the string of reduced directions.
-    return list
+    return result

@@ -7,6 +7,7 @@ find_uniq([ 0, 0, 0.55, 0, 0 ]) == 0.55
 It’s guaranteed that array contains at least 3 numbers.
 """
 
+
 def find_uniq(arr):
     # Sorts the given array.
     arr.sort()

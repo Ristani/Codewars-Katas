@@ -12,6 +12,7 @@ Examples:
     Kata.getMiddle("A") should return "A"
 """
 
+
 def get_middle(s):
     # If the string length is even.
     if len(s) % 2 == 0:
