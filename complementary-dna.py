@@ -1,4 +1,4 @@
-def DNA_strand(dna):
+def dna_strand(dna):
     result = []
     for c in dna:
         if c == "A":
