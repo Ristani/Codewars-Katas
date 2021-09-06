@@ -6,3 +6,7 @@ def open_or_senior(data):
         else:
             result.append("Open")
     return result
+
+# List comprehensions are ridiculous.
+def openOrSenior(data):
+  return ["Senior" if age >= 55 and handicap >= 8 else "Open" for (age, handicap) in data]
